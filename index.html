@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Home | Assignment 2 - Stage 2 | CMS with Contentful</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <button id="menu-toggle">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul id="menu">
+                    <li><img src="./img/logo.png" alt="Candles by Caterina Company Logo"></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#productpage">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="hero">
+            <h1 class="hero-main">Candles by Caterina</h1>
+            <h2 class="hero-sub">Hand-poured Candles, 100% Soy Wax, Proudly Canadian!</h2>
+        </div>
+        <section class="featured-products" id="products-section">
+            <h2 class="section-main">Our Featured Products</h2>
+            <h3 class="section-sub">Check out our festive selections for your holiday cheer!</h3>
+            <div id="products-featured">
+                <!-- dynamically created content -->
+            </div>
+        </section>
+        <section class="all-products">
+            <h2 class="section-main">All Products</h2>
+            <h3 class="section-sub">Check out our selection of classic scents and fan favourites!</h3>
+            <div id="products">
+                <!-- dynamically created content -->
+            </div>
+        </section>
+        <footer class="footer">
+            <ul>
+                <li><img src="./img/logo.png" alt="Candles by Caterina Company Logo"></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#productpage">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <p>Copyright ©2024 | Website designed by Thomas Cristiano</p>
+        </footer>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+<script src="./js/script.js"></script>
+</html>

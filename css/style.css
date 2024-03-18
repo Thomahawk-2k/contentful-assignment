@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@400;600&display=swap');
+
+/* Global */
+:root {
+    --dark-colour: #333;
+    --light-colour: #ddd;
+    --brand-colour-light: #fffded;    
+    --brand-colour-mid: #f9eec6;
+    --brand-colour-dark: #e8d17d;
+    --brand-colour-black: #685911;
+    --brand-colour-transparent: #ffffff95;
+    --font-ratio: 1;
+    --main-heading: calc(2.5rem * var(--font-ratio));
+    --sub-heading: calc(1.5rem * var(--font-ratio));
+    --body-text: calc(1rem * var(--font-ratio));
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: var(--brand-colour-light);
+}
+body {
+    font-family: 'Playpen Sans', cursive;
+}
+.wrapper {
+    max-width: 65rem;
+    margin: 2rem auto;
+    box-shadow: 0 0 1rem var(--brand-colour-black);
+}
+h1, h2, h3, p {
+    color: var(--dark-colour);
+    padding-bottom: 1rem;
+}
+img {
+    margin: auto;
+    display: flex;
+    width: 90%;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: var(--brand-colour-mid);
+}
+nav {
+    padding: 1rem;
+    text-align: right;
+}
+#menu {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#menu a {
+    text-decoration: none;
+    color: var(--dark-colour);
+    padding: 1.25rem 0;
+}
+#menu-toggle {
+    font-size: var(--sub-heading);
+    display: none;
+    background-color: var(--brand-colour-mid);
+    color: var(--dark-colour);
+    border: none;
+}
+#menu.active {
+    display: flex;
+}
+
+/* Hero */
+.hero {
+    min-height: 25rem;
+    background-image: radial-gradient(circle, var(--brand-colour-transparent) 40%, var(--brand-colour-mid) 100%), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.hero-main, .hero-sub {
+    padding: 0.5rem;
+    background-color: var(--brand-colour-transparent);
+    color: var(--brand-colour-black);
+    text-align: center;
+}
+.hero-main, .section-main {
+    font-size: var(--main-heading);
+}
+.hero-sub, .section-sub {
+    font-size: var(--sub-heading);
+}
+
+/* Section */
+section {
+    margin: 2rem;
+}
+.section-main, .section-sub {
+    padding: 0.5rem;
+    color: var(--brand-colour-black);
+    text-align: center;
+}
+
+/* Products */
+#products-featured, #products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-content: center;
+    column-gap: 1rem;
+}
+.product-image {
+    width: 18rem;
+    border-style: solid;
+    border-width: 0.8rem;
+    border-radius: 2rem;
+}
+.product-details-image {
+    width: 30rem;
+    border-style: solid;
+    border-width: 1rem;
+    border-radius: 2rem;
+}
+.product-name {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--sub-heading);
+}
+.product-title {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--main-heading);
+}
+.product-description {
+    margin: 3rem;
+    text-align: center;
+    font-size: var(--body-text);
+}
+.product-price {
+    margin: 1rem;
+    text-align: center;
+    font-size: var(--sub-heading);
+}
+
+/* Footer */
+footer {
+    background-color: var(--brand-colour-mid);
+
+}
+footer ul {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+footer p {
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+/* Links */
+li {
+    list-style: none;
+    margin: 1rem;
+    max-width: 5rem;
+    max-height: 5rem;
+}
+li a:link {
+    color: var(--dark-colour);
+    background-color: transparent;
+    text-decoration: none;
+}
+li a:visited {
+    color: var(--brand-colour-black);
+}
+li a:hover {
+    text-shadow: 0rem 0rem 1rem var(--brand-colour-black);
+}
+li a:active {
+    color: var(--brand-colour-black);
+}
+
+/* Media Queries */
+
+/* media query for laptop - less than 1024px/64rem */
+@media screen and (max-width:64em) {
+    .wrapper {
+        margin: 0 auto;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .product-image {
+        width: 15rem;
+        border-width: 0.8rem;
+    }
+    .product-details-image {
+        width: 26rem;
+        border-width: 0.8rem;
+    }
+}
+
+/* media query for tablet - less than 768px/48rem */
+@media screen and (max-width:48em) {
+    :root {
+        --font-ratio: 0.9;
+    }
+    .hero {
+        min-height: 20rem;
+    }
+    #products-featured, #products {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+    }
+    .product-image {
+        width: 13rem;
+        border-width: 0.6rem;
+    }
+    footer ul {
+        gap: 1.25rem;
+    }
+    .gallery-images {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+    footer ul li {
+        margin: auto;
+    }
+}
+
+/* media query for switching to nav button */
+@media screen and (max-width: 37.5rem) {
+    header {
+        height: 0;
+    }
+    nav {
+        width: 0;
+    }
+    #menu-toggle {
+        display: inline;
+        position: fixed;
+        padding: 1.1rem 1.3rem;
+        border-radius: 2rem;
+        box-shadow: 0 0 .3125rem var(--brand-colour-black);
+        z-index: 999;
+    }
+    #menu {
+        display: none;
+        position: fixed;
+        flex-direction: column;
+        left: 5.5rem;
+        background-color: var(--brand-colour-mid);
+        border-radius: 0.5rem;
+        box-shadow: 0 0 .3125rem var(--brand-colour-black);;
+        padding: 1.75rem;
+        z-index: 999;
+    }
+    .hero {
+        min-height: 23rem;
+    }
+    .product-title {
+        margin-top: 6rem;
+    }
+}
+
+/* media query for mobile - less than 480px/30rem */
+@media screen and (max-width: 30em) {
+    :root {
+        --font-ratio: 0.7;
+        --body-text: 1rem;
+    }
+    .hero {
+        min-height: 18rem;
+    }
+    .products h2, .more-products h2, .gallery h2 {
+        font-size: var(--main-heading);
+    }
+    #products-featured, #products {
+        grid-template-columns: 1fr;
+        column-gap: 2rem;
+    }
+    .product-image {
+        width: 16rem;
+    }
+    .product-details-image {
+        width: 23rem;
+        border-width: 0.6rem;
+    }
+    .product-description {
+        margin: 2rem;
+    }
+    input {
+        margin: 1rem;
+    }
+    footer ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
